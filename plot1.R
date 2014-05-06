@@ -8,7 +8,7 @@ pc_data <- subset(pc_data, Date %in% c("1/2/2007", "2/2/2007"))
 pc_data[,Date:=as.IDate(Date, format = "%d/%m/%Y")]
 pc_data[,Time:=as.ITime(Time, format = "%H:%M:%S")]
 
-# Plot and save to png file
+# Plot histogram of variable "Global_active_power" and save to a png file.
 png("plot1.png", bg = "transparent")
 with(pc_data, 
      hist(Global_active_power, breaks = 12,
